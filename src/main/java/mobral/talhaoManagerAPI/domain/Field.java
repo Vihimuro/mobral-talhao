@@ -22,7 +22,7 @@ public class Field {
     @Column(name="cd_id_fazenda")
     private long cdIdFarm;
 
-    @Column(columnDefinition = "geometry")
+    @Column(columnDefinition = "geometry(Geometry,4326)")
     private Geometry geom;
 
 }
