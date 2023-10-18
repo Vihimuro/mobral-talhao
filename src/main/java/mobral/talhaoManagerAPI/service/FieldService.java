@@ -31,7 +31,7 @@ public class FieldService {
         mapper.registerModule(new JtsModule());
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
 
-        ArrayList<FeatureJson> features = fieldPostRequestBody.getFeatureCollection().getFeatures();
+        ArrayList<FeatureJson> features = fieldPostRequestBody.getFeaturesCollection().getFeatures();
         List<Field> fields = new ArrayList<>();
         for (FeatureJson feature: features){
             Double[][][] listOfCoordinates = feature.getGeometry().getCoordinates();

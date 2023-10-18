@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @Data
 @AllArgsConstructor
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class FeatureCollectionJson{
+public class FeatureCollectionJson {
     private final String type;
     private ArrayList<FeatureJson> features;
 }
