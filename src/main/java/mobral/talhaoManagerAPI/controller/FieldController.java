@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("fields")
 @AllArgsConstructor
@@ -19,7 +21,7 @@ public class FieldController {
     private final FieldService fieldService;
 
     @PostMapping
-    public ResponseEntity<Field> save(@RequestBody FieldPostRequestBody fieldPostRequestBody) {
-        return new ResponseEntity<>(fieldService.save(fieldPostRequestBody), HttpStatus.CREATED);
+    public ResponseEntity<List<Field>> saveAll(@RequestBody FieldPostRequestBody fieldPostRequestBody) {
+        return new ResponseEntity<>(fieldService.saveAll(fieldPostRequestBody), HttpStatus.CREATED);
     }
 }
