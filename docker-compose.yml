@@ -4,9 +4,9 @@ services:
   postgis:
     image: postgis/postgis
     environment:
-      POSTGRES_PASSWORD: postgis
-      POSTGRES_DB: postgis
-      POSTGRES_USER: postgis
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
     ports:
       - "5435:5432"
     volumes:
