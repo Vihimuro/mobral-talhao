@@ -65,11 +65,11 @@
 			<artifactId>hibernate-spatial</artifactId>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.graphhopper.external/jackson-datatype-jts -->
+		<!-- https://mvnrepository.com/artifact/org.n52.jackson/jackson-datatype-jts -->
 		<dependency>
-			<groupId>com.graphhopper.external</groupId>
+			<groupId>org.n52.jackson</groupId>
 			<artifactId>jackson-datatype-jts</artifactId>
-			<version>2.14</version>
+			<version>1.2.10</version>
 		</dependency>
 
 

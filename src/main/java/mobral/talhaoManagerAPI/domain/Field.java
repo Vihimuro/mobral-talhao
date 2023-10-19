@@ -1,7 +1,5 @@
 package mobral.talhaoManagerAPI.domain;
 
-import com.bedatadriven.jackson.datatype.jts.serialization.GeometryDeserializer;
-import com.bedatadriven.jackson.datatype.jts.serialization.GeometrySerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
@@ -10,6 +8,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.locationtech.jts.geom.Geometry;
+import org.n52.jackson.datatype.jts.GeometryDeserializer;
+import org.n52.jackson.datatype.jts.GeometrySerializer;
+
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
@@ -17,7 +19,7 @@ import org.locationtech.jts.geom.Geometry;
 @Entity
 @Builder
 @Table(name = "cdt_field")
-public class Field {
+public class Field implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cd_id")
@@ -27,7 +29,7 @@ public class Field {
     private long cdIdFarm;
 
     @JsonSerialize(using = GeometrySerializer.class)
-    @JsonDeserialize(using = GeometryDeserializer.class)
+    @JsonDeserialize(contentUsing = GeometryDeserializer.class)
     @Column(columnDefinition = "geometry(Geometry,4326)")
     private Geometry geom;
 

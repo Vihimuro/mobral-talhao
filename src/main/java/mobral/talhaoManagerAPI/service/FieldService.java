@@ -1,6 +1,5 @@
 package mobral.talhaoManagerAPI.service;
 
-import com.bedatadriven.jackson.datatype.jts.JtsModule;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,6 +11,7 @@ import mobral.talhaoManagerAPI.repository.FieldRepository;
 import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.GeometryFactory;
 import org.locationtech.jts.geom.Polygon;
+import org.n52.jackson.datatype.jts.JtsModule;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
