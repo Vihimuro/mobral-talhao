@@ -7,5 +7,5 @@ import lombok.Data;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class FieldPostRequestBody {
     private long cdIdFazenda;
-    private FeatureCollectionJson featuresCollection;
+    private FeatureCollectionJson featureCollection;
 }
